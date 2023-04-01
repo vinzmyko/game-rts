@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://bc0spq5n6ll7j"]
+
+[ext_resource type="Script" path="res://ui/Camera.gd" id="1_mtndk"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_13uor"]
+bg_color = Color(0.223529, 0.223529, 0.223529, 0.501961)
+border_width_left = 3
+border_width_top = 3
+border_width_right = 3
+border_width_bottom = 3
+border_blend = true
+corner_radius_top_left = 2
+corner_radius_top_right = 2
+corner_radius_bottom_right = 2
+corner_radius_bottom_left = 2
+
+[node name="UI" type="CanvasLayer"]
+
+[node name="Camera" type="Camera2D" parent="."]
+limit_left = 0
+limit_top = 0
+script = ExtResource("1_mtndk")
+
+[node name="Panel" type="Panel" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_13uor")
